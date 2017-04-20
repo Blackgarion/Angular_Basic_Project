@@ -1,8 +1,12 @@
 import {NgModule} from '@angular/core';
 
+import {MaterializeModule} from 'angular2-materialize';
+
 import {ProductsComponent} from './products.component';
+import {ProductsFiltersComponent} from './products-filters/products-filters.component';
 
 @NgModule({
-  declarations: [ProductsComponent]
+  imports: [MaterializeModule],
+  declarations: [ProductsComponent, ProductsFiltersComponent]
 })
 export class ProductsModule {}

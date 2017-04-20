@@ -1,0 +1,16 @@
+div {
+  position: relative;
+
+  h1 {
+    position: absolute;
+    z-index: 2;
+    color: white;
+    right: 2%;
+  }
+
+  img {
+    position: absolute;
+    width: 100vw;
+    height: 93vh;
+  }
+}

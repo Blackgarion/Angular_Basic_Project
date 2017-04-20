@@ -1,0 +1,42 @@
+$sidebar-color: #383838;
+$text-color: #C9C9C9;
+
+.products-options {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 30vh;
+  margin: 0 2.5vw 0 0;
+  background-color: $sidebar-color;
+
+  h5 {
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    color: $text-color;
+  }
+
+  .display {
+    display: flex;
+    justify-content: space-around;
+    margin: 2vh 0;
+
+    span {
+      color: $text-color;
+      font-family: "Roboto", sans-serif;
+      font-weight: bold;
+    }
+  }
+
+  .filters {
+    p {
+      padding-left: 3vw;
+      color: $text-color;
+    }
+  }
+
+  .line-separator {
+    height: 2px;
+    background: #717171;
+    border-bottom: 1px solid $text-color;
+  }
+}

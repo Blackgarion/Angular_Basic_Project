@@ -1,0 +1,45 @@
+$light-grey: #eeeeee;
+
+.products-container {
+  display: flex;
+  height: 93vh;
+}
+
+.products-list {
+  width: 60vw;
+  display: flex;
+  margin: 2.5vw auto 0 auto;
+  flex-wrap: wrap;
+  transition: 0.5s linear;
+  overflow: scroll;
+  height: 85vh;
+
+  .product-card {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    background-color: $light-grey;
+    box-shadow: 8px 7px 3px -6px rgba(0,0,0,0.75);
+    margin: 20px;
+    transition: 0.5s linear;
+    
+    img {
+      margin: 10px auto;
+      height: 150px;
+      width: 150px;
+    }
+
+    h6 {
+      text-align: center;
+      font-family: inherit;
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 0;
+    }
+
+    p {
+      text-align: center;
+      margin: 3px 15px 20px 15px;
+    }
+  }
+}
