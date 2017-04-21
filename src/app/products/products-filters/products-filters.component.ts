@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, EventEmitter, Output} from '@angular/core';
 
 @Component({
   selector: 'app-products-filters',
@@ -6,6 +6,18 @@ import {Component} from '@angular/core';
   styleUrls: ['./template/products-filters.component.scss']
 })
 export class ProductsFiltersComponent {
+  display: Boolean = false;
   isFreeChecked: Boolean = false;
   isTechnologyChecked: Boolean = false;
+
+  @Output()
+  onDisplay = new EventEmitter<Boolean>();
+  @Output()
+  onFreeChecked = new EventEmitter<Boolean>();
+  @Output()
+  onTechnologyChecked = new EventEmitter<Boolean>();
+
+  onDisplayClick() {
+    this.onDisplay.emit(this.display);
+  }
 }

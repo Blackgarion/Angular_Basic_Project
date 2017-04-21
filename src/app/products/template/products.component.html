@@ -1,35 +1,13 @@
 <div class="products-container">
-  <app-products-filters></app-products-filters>
-  <div *ngIf="products" class="products-list">
-    <div class="product-card">
-      <img src="{{products[0].imagePath}}">
-      <h6>{{products[0].name}}</h6>
-      <p>{{products[0].description}}</p>
-      <p>{{products[0].price}}</p>
-    </div>
-    <div class="product-card">
-      <img src="{{products[1].imagePath}}">
-      <h6>{{products[1].name}}</h6>
-      <p>{{products[1].description}}</p>
-      <p>{{products[1].price}}</p>
-    </div>
-    <div class="product-card">
-      <img src="{{products[2].imagePath}}">
-      <h6>{{products[2].name}}</h6>
-      <p>{{products[2].description}}</p>
-      <p>{{products[2].price}}</p>
-    </div>
-    <div class="product-card">
-      <img src="{{products[3].imagePath}}">
-      <h6>{{products[3].name}}</h6>
-      <p>{{products[3].description}}</p>
-      <p>{{products[3].price}}</p>
-    </div>
-    <div class="product-card">
-      <img src="{{products[4].imagePath}}">
-      <h6>{{products[4].name}}</h6>
-      <p>{{products[4].description}}</p>
-      <p>{{products[4].price}}</p>
+  <app-products-filters (onDisplay)="onDisplay($event)"></app-products-filters>
+  <div [class.products-list]="!display" *ngIf="products" class="products-grid">
+    <div *ngFor="let product of products" class="product-card">
+      <img appResize src="{{product.imagePath}}">
+      <div>
+        <h6>{{product.name}}</h6>
+        <p>{{product.description}}</p>
+        <p>{{product.price + ' $'}}</p>
+      </div>
     </div>
   </div>
 </div>

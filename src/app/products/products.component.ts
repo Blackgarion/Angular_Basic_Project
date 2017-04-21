@@ -10,6 +10,7 @@ import {ProductsService} from './products.service';
 })
 export class ProductsComponent implements OnInit {
   products: Product[];
+  display: Boolean = true;
 
   constructor(private productsService: ProductsService) {}
 
@@ -17,5 +18,10 @@ export class ProductsComponent implements OnInit {
     this.productsService.getProductsList().then((products: Product[]) => {
       this.products = products;
     });
+  }
+
+  onDisplay(display: Boolean) {
+    this.display = display;
+    console.log(display);
   }
 }
