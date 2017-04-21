@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Super Awesome Chair",
+    "description": "Really Comfy chair!",
+    "price": 39.99,
+    "imagePath": "/assets/images/products/chair.png",
+    "category": "office"
+  },
+  {
+    "name": "Super Awesome Mug",
+    "description": "Awesome for wake up coffey!",
+    "price": 0,
+    "imagePath": "/assets/images/products/coffe_cup.png",
+    "category": "home"
+  },
+  {
+    "name": "Super Awesome Laptop",
+    "description": "Everyone needs a good laptop nowadays!",
+    "price": 299.99,
+    "imagePath": "/assets/images/products/laptop.png",
+    "category": "technology"
+  },
+  {
+    "name": "Super Awesome Smartphone",
+    "description": "Get the latest XPhone 17!",
+    "price": 249.99,
+    "imagePath": "/assets/images/products/smartphone.png",
+    "category": "technology"
+  },
+  {
+    "name": "Super Awesome Table",
+    "description": "Well... you probably will need it at some point!",
+    "price": 0,
+    "imagePath": "/assets/images/products/table.png",
+    "category": "home"
+  }
+]
