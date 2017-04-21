@@ -1,7 +1,8 @@
 <div class="products-container">
-  <app-products-filters (onDisplay)="onDisplay($event)"></app-products-filters>
+  <app-products-filters (onDisplay)="onDisplay($event)" (onFreeChecked)="onFreeFilter($event)" (onTechnologyChecked)="onTechnologyFilter($event)">
+  </app-products-filters>
   <div [class.products-list]="!display" *ngIf="products" class="products-grid">
-    <div *ngFor="let product of products" class="product-card">
+    <div *ngFor="let product of products | freeProductsFilter:freeFilter | technologyFilter:technologyFilter" class="product-card">
       <img appResize src="{{product.imagePath}}">
       <div>
         <h6>{{product.name}}</h6>

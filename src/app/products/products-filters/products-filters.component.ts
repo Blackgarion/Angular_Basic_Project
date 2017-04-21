@@ -20,4 +20,12 @@ export class ProductsFiltersComponent {
   onDisplayClick() {
     this.onDisplay.emit(this.display);
   }
+
+  onFreeClick() {
+    this.onFreeChecked.emit(!this.isFreeChecked);
+  }
+
+  onTechnologyClick() {
+    this.onTechnologyChecked.emit(!this.isTechnologyChecked);
+  }
 }

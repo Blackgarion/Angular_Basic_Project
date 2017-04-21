@@ -13,11 +13,11 @@
   <div class="line-separator"></div>
   <h5>Filters</h5>
   <div class="filters">
-    <p>
+    <p (click)="onFreeClick()">
       <input type="checkbox" id="free" [(ngModel)]="isFreeChecked" />
       <label for="free">FREE</label>
     </p>
-    <p>
+    <p (click)="onTechnologyClick()">
       <input type="checkbox" id="technology" [(ngModel)]="isTechnologyChecked" />
       <label for="technology">Technology</label>
     </p>
