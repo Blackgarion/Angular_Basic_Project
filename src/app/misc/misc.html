@@ -1,0 +1,39 @@
+<h1>Hello! how are you {{ name }}</h1>
+<p [style.color]='color'>This is an important message!</p>
+<a class="btn" (click)="helloWorld()">Hello World btn</a>
+
+<br>
+
+<input [(ngModel)]="greeting" type="text">
+<p>How are you? : {{ greeting }}</p>
+
+<br>
+
+<h1 *ngIf="1+1 == 2">My toddler sums are looking pretty good!</h1>
+<h2 *ngFor="let number of [2,4,6,8,10]">I'm a even number {{ number }}</h2>
+<input [(ngModel)]="number" type="text">
+<div [ngSwitch]="number">
+  <p *ngSwitchCase="1">I'm a un even number</p>
+  <p *ngSwitchCase="2">I'm a even number</p>
+  <p *ngSwitchCase="3">I'm a un even number</p>
+  <p *ngSwitchDefault>Not a Valid number :(</p>
+</div>
+
+<br>
+
+<div style="display: flex; justify-content: space-between">
+  <div [class.red]="1+1 == 2" class="square"></div>
+  <div [class.green]="1+1 == 3" boxHighLighter class="square"></div>
+  <div [ngStyle]="{'background-color' : 'blue'}" class="square"></div>
+</div>
+
+<br>
+
+<h3>Birthdays!</h3>
+<ul>
+  <li>Joker {{ jokerBirthday | date }}</li>
+  <li>Mona {{ monaBirthday | date:"mm/dd/yy" }}</li>
+  <li>{{ 'Skull' | myUpperCase }} {{ skullBirthday }}</li>
+</ul>
+
+<br>

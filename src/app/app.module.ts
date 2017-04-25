@@ -1,16 +1,15 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
-
+import {NgModule} from '@angular/core';
+import {FormsModule} from '@angular/forms';
+import {HttpModule} from '@angular/http';
+import {BrowserModule} from '@angular/platform-browser';
 import {MaterializeModule} from 'angular2-materialize';
 
-import {AppRoutingModule} from './router/app-routing.module';
-import {ProductsModule} from './products/products.module';
-
-import {AppComponent} from './app.component';
 import {AboutComponent} from './about/about.component';
+import {AppComponent} from './app.component';
+import {MiscelaneousModule} from './misc/misc.module';
 import {NavBarComponent} from './navbar/navbar.component';
+import {ProductsModule} from './products/products.module';
+import {AppRoutingModule} from './router/app-routing.module';
 
 @NgModule({
   declarations: [
@@ -19,14 +18,11 @@ import {NavBarComponent} from './navbar/navbar.component';
     NavBarComponent,
   ],
   imports: [
-    AppRoutingModule,
-    BrowserModule,
-    FormsModule,
-    HttpModule,
-    MaterializeModule,
-    ProductsModule
+    BrowserModule, FormsModule, HttpModule, MaterializeModule,
+    MiscelaneousModule, ProductsModule, AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
